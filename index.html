@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+    <body>
+        <nav>
+            <img src="Logo.png"class="LogoPicture">
+            <ul>
+                <a href="">Podstrona1</a>
+                <a href="">Podstrona2</a>
+                <a href="">Podstrona3</a>
+                <a href="">Kontakt</a>
+            </ul>
+        </nav>
+        <main>
+            <div class="srodek">
+                <div id="main">
+                    
+                </div>
+                    <footer>
+                    <div class="move">
+                        <a href="#top">Gora</a>
+                        <a href="#span1">Span 1</a>
+                        <a href="#span2">Span 2</a>
+                        <a href="#span3">Span 3</a>
+                        <a href="#span4">Span 4</a>
+                    </div>
+                    <div class="godzinka">
+                        <div id="hours">00</div>
+                        <div id="minutes">00</div>
+                        <div id="seconds">00</div>
+                    </div>
+                </footer>
+            </div>
+            <div class="sidebar">
+                <button onclick="small()">A</button>
+                <button onclick="medium()">A+</button>
+                <button onclick="big()">A++</button>
+                <button class="white" onclick="white()"></button>
+                <button class="black" onclick="black()"></button>
+                <button class="yellow" onclick="yellow()"></button>
+                <button class="cyan" onclick="cyan()"></button>
+            </div>
+        </main>
+    </body>
+<script>
+        function updateClock(){
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    if (hours >= 9 && hours <= 17) {
+        document.getElementById("hours").style.color = "green";
+        document.getElementById("minutes").style.color = "green";
+        document.getElementById("seconds").style.color = "green";
+    }
+    if (hours >= 18 && hours <= 8) {
+        document.getElementById("hours").style.color = "red";
+        document.getElementById("minutes").style.color = "red";
+        document.getElementById("seconds").style.color = "red";
+    }
+
+    document.getElementById("hours").textContent = hours + ":";
+    document.getElementById("minutes").textContent = minutes + ":";
+    document.getElementById("seconds").textContent = seconds;
+    }
+    setInterval(updateClock, 1000);
+
+    updateClock();
+    function small(){
+        document.getElementById("main").style.fontSize = 1 + "rem";
+    }
+    function medium(){
+        document.getElementById("main").style.fontSize = 1.5 + "rem";
+    }
+    function big(){
+        document.getElementById("main").style.fontSize = 2 + "rem";
+    }
+    function white(){
+        document.getElementById("main").style.backgroundColor = "white";
+        document.getElementById("main").style.color = "black";
+    }
+    function black(){
+        document.getElementById("main").style.backgroundColor = "rgb(80, 80, 80)";
+        document.getElementById("main").style.color = "white";
+    }
+    function yellow(){
+        document.getElementById("main").style.backgroundColor = "yellow";
+        document.getElementById("main").style.color = "black";
+    }
+    function cyan(){
+        document.getElementById("main").style.backgroundColor = "cyan";
+        document.getElementById("main").style.color = "black";
+    }
+    var koszt = document.getElementById("koszt").value;
+    parseInt(koszt)
+    function pln(){
+        
+        document.getElementById("koszt").textContent = koszt;
+        parseInt(koszt)
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Pln";
+    }
+    function usd(){
+        parseInt(koszt)
+        let usd = koszt*4;
+        document.getElementById("koszt").textContent = usd;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Usd";
+    }
+    function eur(){
+        parseInt(koszt)
+        let eur = koszt*5;
+        document.getElementById("koszt").textContent = eur;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Eur";
+    }
+</script>
+</html>
