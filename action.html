@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Anita maxx wynn films action </title>
 </head>
 <body>
@@ -12,8 +13,8 @@
         </nav>
 
 
-    <main class="main">
-
+    <main class="main" id="main">
+     <div class="pics" id="zdj"><div class="about" id="about"></div></div>
     </main>
 
 
@@ -23,16 +24,19 @@
     
 <script>
     
-  let j = 289
+  let j = 250
   let images = [];
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 10; i++) {
     const div = document.createElement('div');
     const img = document.createElement('img');
     images.push('https://picsum.photos/id/' + j + '/200/300');
     img.src = images[i];
     div.appendChild(img);
-    document.body.appendChild(div);
+    let imagewrapper = document.getElementById("zdj");
+    imagewrapper.appendChild(div);
+    let about = document.getElementById("about");
+    about.appendChild(div)
     j++;
   }
 
