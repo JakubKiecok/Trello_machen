@@ -3,17 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anita Maxx Wynn Films/Comedy</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Anita maxx wynn films commedy </title>
 </head>
 <body>
-<main>
+
+         <nav>
+
+        </nav>
 
 
+    <main class="main" id="main">
+     <div class="pics" id="zdj">
+    </div>
+    
+        
+    </main>
 
-</main>
+
+            <footer>
+
+            </footer>
+    
 <script>
     
-</script>
-</body>
+  let j = 250
+  let images = [];
 
+
+let posty = [
+    {
+        tytul: "lorem",
+        opis: "dolor sit amet, consectetur adipiscing elit.",
+        autor:"John Doe",
+        dlugosc_tekstu: 50,
+        url:"https://picsum.photos/id/237/200/300"
+    },
+    {
+        tytul: "lorem",
+        opis: "dolor sit amet, consectetur adipiscing elit.",
+        autor:"John Doe",
+        dlugosc_tekstu: 50,
+        url:"https://picsum.photos/id/237/200/300"
+    },
+    {
+        tytul: "lorem",
+        opis: "dolor sit amet, consectetur adipiscing elit.",
+        autor:"John Doe",
+        dlugosc_tekstu: 50,
+        url:"https://picsum.photos/id/237/200/300"
+    },
+    {
+        tytul: "lorem",
+        opis: "dolor sit amet, consectetur adipiscing elit.",
+        autor:"John Doe",
+        dlugosc_tekstu: 50,
+        url:"https://picsum.photos/id/237/200/300"
+    }
+]
+
+    let artykul1_tytul = posty[0].tytul;
+    console.log(artykul1_tytul)
+    let artykul1_opis = posty[0].tytul;
+    console.log(artykul1_opis)
+
+        function zdjecie(){
+        
+        for(let i = 0; i<posty.length; i++){
+            let artykul1 = document.createElement("article");
+            let header = document.createElement("h2");
+            let content = document.createElement("p");
+            let image = document.createElement("img");
+            header.innerText = posty[i].tytul;
+            content.innerText = posty[i].opis;
+            image.src= posty[i].url;
+            artykul.appendChild(header);
+            artykul.appendChild(content);
+            artykul.appendChild(image);
+            document.main.appendChild(artykul);
+
+            
+        }
+        zdjecie();
+    }
+</script>
+
+</body>
 </html>
