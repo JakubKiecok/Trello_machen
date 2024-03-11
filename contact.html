@@ -1,37 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylecontact.css">
 </head>
 <body>
     <header>
-        <!-- NAV BAR -->
+        <nav>
+            <ul>
+                <a href=""><img src="Logo.png"class="LogoPicture"></a>
+                <p><a href="">Podstrona1</a></p>
+                <p><a href="">Podstrona2</a></p>
+                <p><a href="">Podstrona3</a></p>
+                <p><a href="">Kontakt</a></p>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="main">
             <div class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.320960249623!2d19.012661176841156!3d50.248589501877376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716ce5025d77e4b%3A0x6ddc5ef77e0aaaa3!2sAstr%C3%B3w%2010%2C%2040-045%20Katowice!5e0!3m2!1spl!2spl!4v1710142049149!5m2!1spl!2spl" width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.320960249623!2d19.012661176841156!3d50.248589501877376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716ce5025d77e4b%3A0x6ddc5ef77e0aaaa3!2sAstr%C3%B3w%2010%2C%2040-045%20Katowice!5e0!3m2!1spl!2spl!4v1710142049149!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contactTypes">
+                <ul>
+                    <li><img src="pin.png" alt="pin icon"></li>
+                    <li><img src="email.png" alt="mail icon">Email: anitamaxwynnfilms@example.com</li>
+                    <li><img src="phone-call.png" alt="phone icon">Numer telefonu: +1 555-444-1234</li>
+                    <li><img src="fax.png" alt="">Fax: 173-698-8854</li>
+                </ul>
             </div>
             <div class="contact_us">
-                <div class="">
+                <div class="con">
                     <h2>Skontaktuj się z Nami: </h2>
                     <hr>
                 </div>
                 <div class="kontakt">
-                    <div class="">
-                        <div class="adres"></div>
-                        <div class="telefon"></div>
-                        <div class="mail"></div>
-                    </div>
                     <div class="formularz">
                         <form action="#" class="contactForm">
-                            <label for="fname">Imię</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Wpisz swoje imię.." required>
-                            <label for="lname">Nazwisko</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Wpisz swoje nazwisko.." required>
+                            <div class="form">
+                                <div class="form-group">
+                                    <label for="fname">Imię</label>
+                                    <input type="text" id="fname" name="firstname" placeholder="Wpisz swoje imię.." required>
+                                </div>
+                                <div class="form-group-2">
+                                    <label for="lname">Nazwisko</label>
+                                    <input type="text" id="lname" name="lastname" placeholder="Wpisz swoje nazwisko.." required>
+                                </div>
+                            </div>
                             <label> Twój email</label>
                             <label>
                                 <input type="text" placeholder="Email address" name="mail" required>
@@ -285,7 +303,7 @@
                             </select>
                             <label for="subject">Subject</label>
                             <textarea id="subject" name="subject" placeholder="Napisz do Nas.." style="height:200px" required></textarea>
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Wyślij">
                         </form>
                     </div>
                 </div>
