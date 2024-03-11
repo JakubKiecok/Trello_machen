@@ -30,6 +30,8 @@ footer{
     height: 20%;
 }
 
+
+/* nawigacja */
 ul{
     display: flex;
     justify-content: center;
@@ -62,6 +64,8 @@ ul p{
     -webkit-text-fill-color: transparent;
 }
 
+
+/* kontaktiren */
 iframe{
     margin-top: 2.5%;
     width: 100%;
