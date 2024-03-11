@@ -26,8 +26,3 @@ footer{
     width: 80%;
     height: 20%;
 }
-.pics{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5%;
-}

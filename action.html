@@ -14,7 +14,7 @@
 
 
     <main class="main" id="main">
-     <div class="pics" id="zdj"><div class="about" id="about"></div></div>
+     <div class="pics" id="zdj"></div>
     </main>
 
 
@@ -26,18 +26,33 @@
     
   let j = 250
   let images = [];
-
+  let filmy = [{tytul: "jakis tytul1", opis: "Opis1", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {
+   tytul: "jakis tytul2",
+   opis: "Opis2",
+   dlugosc_tekstu:1200,
+   url:"https://picsum.photos/id/237/200/400"
+  },
+  {tytul: "jakis tytul3", opis: "Opis3", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {tytul: "jakis tytul4", opis: "Opis4", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {tytul: "jakis tytul5", opis: "Opis5", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {tytul: "jakis tytul6", opis: "Opis6", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {tytul: "jakis tytul7", opis: "Opis7", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {tytul: "jakis tytul8", opis: "Opis8", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {tytul: "jakis tytul9", opis: "Opis9", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  {tytul: "jakis tytul10", opis: "Opis10", dlugosc_tekstu:1200, url:"https://picsum.photos/id/237/200/400"},];
   for (let i = 0; i < 10; i++) {
-    const div = document.createElement('div');
-    const img = document.createElement('img');
-    images.push('https://picsum.photos/id/' + j + '/200/300');
-    img.src = images[i];
-    div.appendChild(img);
-    let imagewrapper = document.getElementById("zdj");
-    imagewrapper.appendChild(div);
-    let about = document.getElementById("about");
-    about.appendChild(div)
-    j++;
+    let artykul = document.createElement("article");
+    let header = document.createElement("h2");
+    let content = document.createElement("p");
+    let image = document.createElement("img");
+    header.innerText = filmy[i].tytul;
+    content.innerText = filmy[i].opis;
+    image.src = filmy[i].url;
+    artykul.appendChild(header);
+    artykul.appendChild(content);
+    artykul.appendChild(image);
+    document.getElementById("main").appendChild(artykul);
   }
 
 </script>
