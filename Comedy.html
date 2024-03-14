@@ -6,87 +6,166 @@
     <link rel="stylesheet" href="style.css">
     <title>Anita maxx wynn films commedy </title>
 </head>
-<body>
-
-         <nav>
-
+    <body>
+        <nav>  
+            <img src="Logo.png" id="LogoPicture">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="Comedy.html">Commedy</a>
+                <a href="action.html">Action</a>
+                <a href="contactV2">Kontakt</a>
+            </ul>
         </nav>
-
-
-    <main class="main" id="main">
-     <div class="pics" id="zdj">
-    </div>
-    
-        
-    </main>
-
-
-            <footer>
-
-            </footer>
-    
+        <main>
+            <div class="srodek">
+                <div id="main">
+                    
+                </div>
+                    <footer>
+                    <div class="move">
+                        <a href="#LogoPicture">Gora</a>
+                        <a href="#span1">Film1</a>
+                        <a href="#span2">Film2</a>
+                        <a href="#span3">Film3</a>
+                        <a href="#span4">Film4</a>
+                    </div>
+                    <div class="godzinka">
+                        <div id="hours">00</div>
+                        <div id="minutes">00</div>
+                        <div id="seconds">00</div>
+                    </div>
+                </footer>
+            </div>
+            <div class="sidebar">
+                <button onclick="small()">A</button>
+                <button onclick="medium()">A+</button>
+                <button onclick="big()">A++</button>
+                <button class="white" onclick="white()"></button>
+                <button class="black" onclick="black()"></button>
+                <button class="yellow" onclick="yellow()"></button>
+                <button class="cyan" onclick="cyan()"></button>
+            </div>
+        </main>
+    </body>
 <script>
-    
-  let j = 250
-  let images = [];
+  let filmy = [
+    {tytul: "Dorian reaktywacja",
+        opis: "Boss narkotykowy zostaje reinkarnowany w czarnego psa, musi dostarczyć mocny towar do klientów lecz na jego drodze stoi jego dawna znajoma Pani z niemieckiego, okazuje się, że pracuje w konkurencji,która przyczyniła się do upadku jego imperium.Musi stawić czoła niemieckim nazistom pewien kot imieniem Kitler zawłaszcza jego majątek.Bohater zawiera sojusz z komunistycznym kartelem Psy Stalina, ostateczna rozgrywka potoczy się w opuszczonym obozie Tiere macht zu arbite frau.",
+        dlugosc_filmu: "150min",
+        ocena:"5 gwiazdek ★",
+        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-rUesVtNoRaX2eOmGewPpWkrWrDpsVKc_vYzFNA4NnpeFmD069TSn8DZLASj33qyjy4&usqp=CAU/400/400"},
 
+    {tytul: "Nowy Targ wieczny korek",
+        opis: "Nastoletni Mario codziennie rano musi wyjść na zewnątrz i nie może wrócić przed 19:00. Takie są zasady w schronisku dla bezdomnych, w którym mieszka. W ciągu dnia chowa się przed chłodem w bibliotece lub w kawiarni. Czuje się samotny i wyrzucony na margines w świecie, w którym nie wszyscy mają równe szanse. Znalezienie pracy w sytuacji, gdy jego adres to schronisko dla bezdomnych, jest dla Gosha niemal niemożliwe. Nieoczekiwanie jednak pojawia się nadzieja - znajduje namiastkę domu i po raz pierwszy od dawna widzi dla siebie lepszą przyszłość.,",
+        dlugosc_filmu: "90min",
+        ocena:"5 gwiazdek ★",
+        url:"https://picsum.photos/id/376/400/400"},
 
-let posty = [
-    {
-        tytul: "lorem",
-        opis: "dolor sit amet, consectetur adipiscing elit.",
-        autor:"John Doe",
-        dlugosc_tekstu: 50,
-        url:"https://picsum.photos/id/237/200/300"
-    },
-    {
-        tytul: "lorem",
-        opis: "dolor sit amet, consectetur adipiscing elit.",
-        autor:"John Doe",
-        dlugosc_tekstu: 50,
-        url:"https://picsum.photos/id/237/200/300"
-    },
-    {
-        tytul: "lorem",
-        opis: "dolor sit amet, consectetur adipiscing elit.",
-        autor:"John Doe",
-        dlugosc_tekstu: 50,
-        url:"https://picsum.photos/id/237/200/300"
-    },
-    {
-        tytul: "lorem",
-        opis: "dolor sit amet, consectetur adipiscing elit.",
-        autor:"John Doe",
-        dlugosc_tekstu: 50,
-        url:"https://picsum.photos/id/237/200/300"
+    {tytul: "Wakacje na bani",
+        opis: "Nastoletni Mario codziennie rano musi wyjść na zewnątrz i nie może wrócić przed 19:00. Takie są zasady w schronisku dla bezdomnych, w którym mieszka. W ciągu dnia chowa się przed chłodem w bibliotece lub w kawiarni. Czuje się samotny i wyrzucony na margines w świecie, w którym nie wszyscy mają równe szanse. Znalezienie pracy w sytuacji, gdy jego adres to schronisko dla bezdomnych, jest dla Gosha niemal niemożliwe. Nieoczekiwanie jednak pojawia się nadzieja - znajduje namiastkę domu i po raz pierwszy od dawna widzi dla siebie lepszą przyszłość.,",
+        dlugosc_filmu: "125min",
+        ocena:"5 gwiazdek ★",
+        url:"https://picsum.photos/id/512/400/400"},
+
+    {tytul: "Bezdomny the Movie",
+        opis: "Nastoletni Mario codziennie rano musi wyjść na zewnątrz i nie może wrócić przed 19:00. Takie są zasady w schronisku dla bezdomnych, w którym mieszka. W ciągu dnia chowa się przed chłodem w bibliotece lub w kawiarni. Czuje się samotny i wyrzucony na margines w świecie, w którym nie wszyscy mają równe szanse. Znalezienie pracy w sytuacji, gdy jego adres to schronisko dla bezdomnych, jest dla Gosha niemal niemożliwe. Nieoczekiwanie jednak pojawia się nadzieja - znajduje namiastkę domu i po raz pierwszy od dawna widzi dla siebie lepszą przyszłość.",
+        dlugosc_filmu: "100min",
+        ocena:"5 gwiazdek ★",
+        url:"https://picsum.photos/id/240/400/400"},
+    ];
+  for (let i = 0; i < 4; i++) {
+    let artykul = document.createElement("article");
+    let header = document.createElement("h1");
+    let content = document.createElement("h2");
+    let dlugosc_filmu = document.createElement("h3");
+    let ocena = document.createElement("h4");
+    let image = document.createElement("img");
+    header.innerText = filmy[i].tytul;
+    content.innerText = filmy[i].opis;
+    dlugosc_filmu.innerText = filmy[i].dlugosc_filmu;
+    ocena.innerText = filmy[i].ocena;
+    image.src = filmy[i].url;
+    artykul.appendChild(header);
+    artykul.appendChild(content);
+    artykul.appendChild(dlugosc_filmu);
+    artykul.appendChild(ocena);
+    artykul.appendChild(image);
+    document.getElementById("main").appendChild(artykul);
+  }
+  function updateClock(){
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    if (hours >= 9 && hours <= 17) {
+        document.getElementById("hours").style.color = "green";
+        document.getElementById("minutes").style.color = "green";
+        document.getElementById("seconds").style.color = "green";
     }
-]
+    if (hours >= 18 && hours <= 8) {
+        document.getElementById("hours").style.color = "red";
+        document.getElementById("minutes").style.color = "red";
+        document.getElementById("seconds").style.color = "red";
+    }
 
-    let artykul1_tytul = posty[0].tytul;
-    console.log(artykul1_tytul)
-    let artykul1_opis = posty[0].tytul;
-    console.log(artykul1_opis)
+    document.getElementById("hours").textContent = hours + ":";
+    document.getElementById("minutes").textContent = minutes + ":";
+    document.getElementById("seconds").textContent = seconds;
+    }
+    setInterval(updateClock, 1000);
 
-        function zdjecie(){
+    updateClock();
+    function small(){
+        document.getElementById("main").style.fontSize = 1 + "rem";
+    }
+    function medium(){
+        document.getElementById("main").style.fontSize = 1.5 + "rem";
+    }
+    function big(){
+        document.getElementById("main").style.fontSize = 2 + "rem";
+    }
+    function white(){
+        document.getElementById("main").style.backgroundColor = "white";
+        document.getElementById("main").style.color = "black";
+    }
+    function black(){
+        document.getElementById("main").style.backgroundColor = "rgb(80, 80, 80)";
+        document.getElementById("main").style.color = "white";
+    }
+    function yellow(){
+        document.getElementById("main").style.backgroundColor = "yellow";
+        document.getElementById("main").style.color = "black";
+    }
+    function cyan(){
+        document.getElementById("main").style.backgroundColor = "cyan";
+        document.getElementById("main").style.color = "black";
+    }
+    var koszt = document.getElementById("koszt").value;
+    parseInt(koszt)
+    function pln(){
         
-        for(let i = 0; i<posty.length; i++){
-            let artykul1 = document.createElement("article");
-            let header = document.createElement("h2");
-            let content = document.createElement("p");
-            let image = document.createElement("img");
-            header.innerText = posty[i].tytul;
-            content.innerText = posty[i].opis;
-            image.src= posty[i].url;
-            artykul.appendChild(header);
-            artykul.appendChild(content);
-            artykul.appendChild(image);
-            document.main.appendChild(artykul);
-
-            
-        }
-        zdjecie();
+        document.getElementById("koszt").textContent = koszt;
+        parseInt(koszt)
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Pln";
+    }
+    function usd(){
+        parseInt(koszt)
+        let usd = koszt*4;
+        document.getElementById("koszt").textContent = usd;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Usd";
+    }
+    function eur(){
+        parseInt(koszt)
+        let eur = koszt*5;
+        document.getElementById("koszt").textContent = eur;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Eur";
     }
 </script>
-
-</body>
-</html>
