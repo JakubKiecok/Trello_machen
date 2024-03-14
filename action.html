@@ -4,44 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Anita maxx wynn films action </title>
+    <title>Document</title>
 </head>
-<body>
-
-         <nav>
-
+    <body>
+        <nav>
+            <img src="Logo.png"class="LogoPicture">
+            <ul>
+                <a href="">Podstrona1</a>
+                <a href="">Podstrona2</a>
+                <a href="">Podstrona3</a>
+                <a href="">Kontakt</a>
+            </ul>
         </nav>
-
-
-    <main class="main" id="main">
-     <div class="pics" id="zdj"></div>
-    </main>
-
-
+        <main>
+            <div class="sidebar">
+                <button onclick="small()">A</button>
+                <button onclick="medium()">A+</button>
+                <button onclick="big()">A++</button>
+                <button class="white" onclick="white()"></button>
+                <button class="black" onclick="black()"></button>
+                <button class="yellow" onclick="yellow()"></button>
+                <button class="cyan" onclick="cyan()"></button>
+            </div>
+            <div class="srodek">
+                <div id="posts">
+                    
+                </div>
+                   
+            </div>
             <footer>
-
+                <div class="move">
+                    <a href="#top">Gora</a>
+                    <a href="#span1">Span 1</a>
+                    <a href="#span2">Span 2</a>
+                    <a href="#span3">Span 3</a>
+                    <a href="#span4">Span 4</a>
+                </div>
+                <div class="godzinka">
+                    <div id="hours">00</div>
+                    <div id="minutes">00</div>
+                    <div id="seconds">00</div>
+                </div>
             </footer>
-    
+        </div>
+        
+    </main>
+    </body>
 <script>
-    
-  let j = 250
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-++
+    let j = 250
   let images = [];
-  let filmy = [{tytul: "jakis tytul1", opis: "Opis1", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
+  let filmy = [{tytul: "Drive", opis: "Bezimienny kierowca postanawia pomóc mężowi swojej sąsiadki w anulowaniu długu u groźnych bandytów.", dlugosc_tekstu:1200,url:"https://fwcdn.pl/fpo/97/46/399746/7392537.3.jpg"},
   {
-   tytul: "jakis tytul2",
-   opis: "Opis2",
+   tytul: "BLADERUNNER 2049",
+   opis: "Ukryty grób skrywa wielką tajemnicę. Aby ją rozwiązać, policyjny łowca androidów musi odnaleźć swojego legendarnego poprzednika.",
    dlugosc_tekstu:1200,
-   url:"https://picsum.photos/id/237/200/400"
+   url:"https://i.ebayimg.com/images/g/R58AAOSwxKxep0qA/s-l1600.jpg"
   },
-  {tytul: "jakis tytul3", opis: "Opis3", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
-  {tytul: "jakis tytul4", opis: "Opis4", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
-  {tytul: "jakis tytul5", opis: "Opis5", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
-  {tytul: "jakis tytul6", opis: "Opis6", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
-  {tytul: "jakis tytul7", opis: "Opis7", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
-  {tytul: "jakis tytul8", opis: "Opis8", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
-  {tytul: "jakis tytul9", opis: "Opis9", dlugosc_tekstu:1200,url:"https://picsum.photos/id/237/200/400"},
-  {tytul: "jakis tytul10", opis: "Opis10", dlugosc_tekstu:1200, url:"https://picsum.photos/id/237/200/400"},];
-  for (let i = 0; i < 10; i++) {
+  {tytul: "Zostań", opis: "Psychiatra Sam Foster próbuje zapobiec samobójstwu swojego pacjenta.", dlugosc_tekstu:1200,url:"https://fwcdn.pl/fpo/01/03/120103/7534328.6.jpg"},
+  {tytul: "Barbie", opis: "Barbie, która żyje w idealnym bajkowym świecie przechodzi kryzys egzystencjalny.", dlugosc_tekstu:1200,url:"https://i.ebayimg.com/images/g/SGgAAOSwJUZkwmEv/s-l1600.jpg"},
+  {tytul: "NICE GUYS. RÓWNI GOŚCIE", opis: "Los Angeles, lata 70. Podczas śledztwa dotyczącego zaginionej aktorki, para prywatnych detektywów wpada na trop dużego spisku.", dlugosc_tekstu:1200,url:"https://image.tmdb.org/t/p/w500/o0sfc9GZDfZ9rYO6I1AXIFW7QrN.jpg"},
+  {tytul: "STAR WARS: CZĘŚĆ III - ZEMSTA SITHÓW", opis: "Dwóch rycerzy Jedi - Obi-Wan Kenobi i Anakin Skywalker - wyrusza na pomoc porwanemu kanclerzowi Palpatine'owi.", dlugosc_tekstu:1200,url:"https://m.media-amazon.com/images/I/61kCtf4DC3L._AC_UF1000,1000_QL80_.jpg"},
+  {tytul: "OBCY - DECYDUJĄCE STARCIE", opis: "Po 57 latach hibernacji Ellen Ripley zostaje odnaleziona. Zgadza się wziąć udział w misji mającej na celu likwidację obcych istot zagrażających kolonizatorom.", dlugosc_tekstu:1200,url:"https://m.media-amazon.com/images/I/719DsqVc8ZL._AC_UF894,1000_QL80_.jpg"},
+  {tytul: "Dorian - Agent Federalny", opis: "Dorian po wielu starciach z nazistami, przedostał się do ZSRR. Po obaleniu nazistów oraz wspólnej walki z komunistami, jako kret w dowództwie ZSRR musi sprostać niebezpiecznemu zadaniu... obalenia komunistycznych rządów raz na zawsze...", dlugosc_tekstu:1200,url:"https://pbs.twimg.com/media/EW75KL6XgAUX3D8.jpg"},];
+  for (let i = 0; i < 8; i++) {
     let artykul = document.createElement("article");
     let header = document.createElement("h2");
     let content = document.createElement("p");
@@ -49,13 +75,90 @@
     header.innerText = filmy[i].tytul;
     content.innerText = filmy[i].opis;
     image.src = filmy[i].url;
+    
+    artykul.appendChild(image);
     artykul.appendChild(header);
     artykul.appendChild(content);
-    artykul.appendChild(image);
-    document.getElementById("main").appendChild(artykul);
+    
+    document.getElementById("posts").appendChild(artykul);
   }
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-++
 
+        function updateClock(){
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    if (hours >= 9 && hours <= 17) {
+        document.getElementById("hours").style.color = "green";
+        document.getElementById("minutes").style.color = "green";
+        document.getElementById("seconds").style.color = "green";
+    }
+    if (hours >= 18 && hours <= 8) {
+        document.getElementById("hours").style.color = "red";
+        document.getElementById("minutes").style.color = "red";
+        document.getElementById("seconds").style.color = "red";
+    }
+
+    document.getElementById("hours").textContent = hours + ":";
+    document.getElementById("minutes").textContent = minutes + ":";
+    document.getElementById("seconds").textContent = seconds;
+    }
+    setInterval(updateClock, 1000);
+
+    updateClock();
+    function small(){
+        document.getElementById("posts").style.fontSize = 1 + "rem";
+    }
+    function medium(){
+        document.getElementById("posts").style.fontSize = 1.5 + "rem";
+    }
+    function big(){
+        document.getElementById("posts").style.fontSize = 2 + "rem";
+    }
+    function white(){
+        document.getElementById("posts").style.backgroundColor = "white";
+        document.getElementById("posts").style.color = "black";
+    }
+    function black(){
+        document.getElementById("posts").style.backgroundColor = "rgb(80, 80, 80)";
+        document.getElementById("posts").style.color = "white";
+    }
+    function yellow(){
+        document.getElementById("posts").style.backgroundColor = "yellow";
+        document.getElementById("posts").style.color = "black";
+    }
+    function cyan(){
+        document.getElementById("posts").style.backgroundColor = "cyan";
+        document.getElementById("posts").style.color = "black";
+    }
+    var koszt = document.getElementById("koszt").value;
+    parseInt(koszt)
+    function pln(){
+        
+        document.getElementById("koszt").textContent = koszt;
+        parseInt(koszt)
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Pln";
+    }
+    function usd(){
+        parseInt(koszt)
+        let usd = koszt*3.92;
+        document.getElementById("koszt").textContent = usd;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Usd";
+    }
+    function eur(){
+        parseInt(koszt)
+        let eur = koszt*4.29;
+        document.getElementById("koszt").textContent = eur;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Eur";
+    }
 </script>
-
-</body>
 </html>
