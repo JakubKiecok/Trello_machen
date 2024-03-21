@@ -33,6 +33,10 @@ nav{
     text-align: center;
      margin: 2%;
     width: 22%;
+
+}
+article p{
+    padding: 1%;
 }
 .srodek{
     overflow-y: auto;
