@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -169,3 +169,196 @@
         document.getElementById("waluta").textContent = " Eur";
     }
 </script>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+    <body>
+        <nav>
+            <img src="Logo.png"class="LogoPicture">
+            <ul>
+                <a href="">Podstrona1</a>
+                <a href="">Podstrona2</a>
+                <a href="">Podstrona3</a>
+                <a href="">Kontakt</a>
+            </ul>
+        </nav>
+        <main>
+            <div class="sidebar">
+                <button onclick="small()">A</button>
+                <button onclick="medium()">A+</button>
+                <button onclick="big()">A++</button>
+                <button class="white" onclick="white()"></button>
+                <button class="black" onclick="black()"></button>
+                <button class="yellow" onclick="yellow()"></button>
+                <button class="cyan" onclick="cyan()"></button>
+            </div>
+            <div class="srodek">
+                <div id="posts">
+                    
+                </div>
+                   
+            </div>
+            <footer>
+                <div class="move">
+                    <a href="#top">Gora</a>
+                    <a href="#span1">Span 1</a>
+                    <a href="#span2">Span 2</a>
+                    <a href="#span3">Span 3</a>
+                    <a href="#span4">Span 4</a>
+                </div>
+                <div class="godzinka">
+                    <div id="hours">00</div>
+                    <div id="minutes">00</div>
+                    <div id="seconds">00</div>
+                </div>
+            </footer>
+        </div>
+        
+    </main>
+    </body>
+<script>
+  let images = [];
+  let filmy = [{tytul: "Dorian reaktywacja",
+        opis: "Boss narkotykowy zostaje reinkarnowany w czarnego psa, musi dostarczyć mocny towar do klientów lecz na jego drodze stoi jego dawna znajoma Pani z niemieckiego, okazuje się, że pracuje w konkurencji,która przyczyniła się do upadku jego imperium.Musi stawić czoła niemieckim nazistom pewien kot imieniem Kitler zawłaszcza jego majątek.Bohater zawiera sojusz z komunistycznym kartelem Psy Stalina, ostateczna rozgrywka potoczy się w opuszczonym obozie Tiere macht zu arbite frau.",
+        dlugosc_filmu: "150min",
+        ocena:"5 gwiazdek ★",
+        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-rUesVtNoRaX2eOmGewPpWkrWrDpsVKc_vYzFNA4NnpeFmD069TSn8DZLASj33qyjy4&usqp=CAU/400/400"},
+        {tytul: "Spooder-man",
+        opis: "Nastoletni Piotrek Parking zostaje ugryziony przez akustycznego pająka.Zdobywa supermoce, zostaje autystycznym superbohaterem, którego świat nie potrzedował aby walczyć z przestępczością.Pomaga Dorianowi w dostawach mocnego towaru",
+        dlugosc_filmu: "85min",
+        ocena:"3.5 gwiazdek ★",    
+        url:"https://static.wikia.nocookie.net/herofanon/images/9/98/Spooder_man_%28movie%29.png/revision/latest/thumbnail/width/200/height/300?cb=20230122181526"},
+        {tytul: "Yuumi gyatt",
+        opis: "Młody jeż spotyka magiczną kotkę która sie miewa Yuumi. Są oni zakochani od pierwszego wejrzenia razem chodzą na bota gdzie Yuumi ciągle lata na książce za jeżem. Przez cały czas są podglądani przez Gragasa(Olon). Niestety Yuumi zdradziła jeża z Gragasem. Jeż chce się zemścić na ojcu z piwskiem.",
+        dlugosc_filmu: "150min",
+        ocena:"5 gwiazdek ★",
+        url:"https://img.redbull.com/images/c_crop,x_269,y_0,h_794,w_636/c_fill,w_450,h_600/q_auto:low,f_auto/redbullcom/2019/05/08/d24d8f2e-8972-466c-9e9f-979f332432fb/yuumi-lol-splash"},
+        {tytul: "Free guy",
+        opis: "Typowy Rayan Reynolds budzi się jak co dzień w swojej grze, odkrywa że jest zwykłym empecetem przez to traci sens dalszego robienia to co mówi mu kod gry.Postanawia stać się graczem oraz wyrwać prawdziwą kobiete na lvl w grze",
+        dlugosc_filmu: "150min",
+        ocena:"4.5 gwiazdek ★",
+        url:"https://ecsmedia.pl/c/free-guy-w-iext125783374.jpg"},
+        {tytul: "CS2",
+        opis: "Jeżyk odkrywa powołanie do awp, maży o zabicu grubego na midzie nie daruje mu odebrania jego kobiety. W raz z teamem akustycznych antyterrorystów pokonuje ciapatych na midzie",
+        dlugosc_filmu: "45min",
+        ocena:"2 gwiazdek ★",
+        url:"https://i.ytimg.com/vi/M5vxLdSXs00/hqdefault.jpg"},
+        {tytul: "Kiecka pierwszy koncert",
+        opis: "Wielki akustyczny matematyk z turettem po zdobyciu odpowiednich talerzy rozpoczyna swoją droge koncertową",
+        dlugosc_filmu: "180min",
+        ocena:"4 gwiazdek ★",
+        url:"https://magazynperkusista.pl/i/images/9/6/8/d2FjPTEyODB4MS40NzIyOTQ1MzMyODM3_src_19968-PROFILOWE-Jak-zacz-nauk-gry-na-perkusji.jpg"},
+        {tytul: "Dorian III - The Final Chapter",
+        opis: "Boss narkotykowy zostaje porwany do gułagu po próbie obalenia rządów komunistów w ZSRR. Trafia na swojego starego kumpla kitlera. razem obmyślają plan o obaleniu demokracji oraz kapitalistycznych państw. Dorian walczy o życie mając na karku całe NATO.",
+        dlugosc_filmu: "120min",
+        ocena:"5 gwiazdek ★",
+        url:"https://www.worldwar1centennial.org/images/News/Dogs/Five_Breeds_that_Served_in_WWI/German_Shepherd_in_Gas_Mask_WWI.jpg"},
+        {tytul: "The Bros",
+        opis: "Ziomeczki żyjące od browarka do browarka",
+        dlugosc_filmu: "75min",
+        ocena:"4.25 gwiazdek ★",
+        url:"https://m.media-amazon.com/images/S/pv-target-images/317a2968dc7b0464d2abbc34aa8d51307bd518d6b56fd316d05d5d63a43cfc2c.jpg"},];
+  for (let i = 0; i < 8; i++) {
+    let artykul = document.createElement("article");
+    let header = document.createElement("h2");
+    let content = document.createElement("p");
+    let ocena = document.createElement("h4");
+    let image = document.createElement("img");
+    header.innerText = filmy[i].tytul;
+    content.innerText = filmy[i].opis;
+    ocena.innerText = filmy[i].ocena;
+    image.src = filmy[i].url;
+    artykul.appendChild(image);
+    artykul.appendChild(header);
+    artykul.appendChild(ocena);
+    artykul.appendChild(content);
+    
+    document.getElementById("posts").appendChild(artykul);
+  }
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-++
+
+        function updateClock(){
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    if (hours >= 9 && hours <= 17) {
+        document.getElementById("hours").style.color = "green";
+        document.getElementById("minutes").style.color = "green";
+        document.getElementById("seconds").style.color = "green";
+    }
+    if (hours >= 18 && hours <= 8) {
+        document.getElementById("hours").style.color = "red";
+        document.getElementById("minutes").style.color = "red";
+        document.getElementById("seconds").style.color = "red";
+    }
+
+    document.getElementById("hours").textContent = hours + ":";
+    document.getElementById("minutes").textContent = minutes + ":";
+    document.getElementById("seconds").textContent = seconds;
+    }
+    setInterval(updateClock, 1000);
+
+    updateClock();
+    function small(){
+        document.getElementById("posts").style.fontSize = 1 + "rem";
+    }
+    function medium(){
+        document.getElementById("posts").style.fontSize = 1.5 + "rem";
+    }
+    function big(){
+        document.getElementById("posts").style.fontSize = 2 + "rem";
+    }
+    function white(){
+        document.getElementById("posts").style.backgroundColor = "white";
+        document.getElementById("posts").style.color = "black";
+    }
+    function black(){
+        document.getElementById("posts").style.backgroundColor = "rgb(80, 80, 80)";
+        document.getElementById("posts").style.color = "white";
+    }
+    function yellow(){
+        document.getElementById("posts").style.backgroundColor = "yellow";
+        document.getElementById("posts").style.color = "black";
+    }
+    function cyan(){
+        document.getElementById("posts").style.backgroundColor = "cyan";
+        document.getElementById("posts").style.color = "black";
+    }
+    var koszt = document.getElementById("koszt").value;
+    parseInt(koszt)
+    function pln(){
+        
+        document.getElementById("koszt").textContent = koszt;
+        parseInt(koszt)
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Pln";
+    }
+    function usd(){
+        parseInt(koszt)
+        let usd = koszt*3.92;
+        document.getElementById("koszt").textContent = usd;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Usd";
+    }
+    function eur(){
+        parseInt(koszt)
+        let eur = koszt*4.29;
+        document.getElementById("koszt").textContent = eur;
+        console.log(koszt)
+        document.getElementById("waluta").textContent = " Eur";
+    }
+</script>
+</html>
