@@ -1,27 +1,199 @@
 @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      text-align: center;
+    html, body{
+        width: 768px;
     }
-  
     nav ul a {
-      padding: 2%;
+        padding: 0;
+        padding-top: 7%;
+        margin: 0;
+      }
+    nav ul{
+        margin: 0;
+        padding: 0;
     }
-  
+    nav{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .srodek{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar button{
+        margin: 25%;
+    }
+
     .sidebar {
       display: none;
+      margin: 0;
+      padding: 0;
     }
   
     .box {
       display: flex;
-      flex-direction: column;
     }
   
     .left,
     .right {
       width: 100%;
     }
-  }
+    .left{
+        overflow-x: auto;
+    }
+    .move{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer{
+        height: 75%;
+    }
+}
+@media (max-width: 425px) {
+    html, body{
+        width: 425px;
+    }
+    nav ul a {
+        padding: 0%;
+        margin: 0;
+      }
+    nav ul{
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .srodek{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar button{
+        margin: 10%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .sidebar {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .box {
+      display: flex;
+    }
+  
+    .left,
+    .right {
+      width: 100%;
+    }
+    .left{
+        overflow-x: auto;
+    }
+}
+@media (max-width: 425px) {
+    html, body{
+        width: 425px;
+    }
+    nav ul a {
+        font-size: 1.5rem;
+      }
+    nav ul{
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .srodek{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar button{
+        margin: 10%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .sidebar {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .box {
+      display: flex;
+    }
+  
+    .left,
+    .right {
+      width: 100%;
+    }
+    .left{
+        overflow-x: auto;
+    }
+}
+@media (max-width: 375px) {
+    html, body{
+        width: 375px;
+    }
+    nav ul a {
+        font-size: 1.5rem;
+      }
+    nav ul{
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .srodek{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar button{
+        margin: 10%;
+        width: 25px;
+        height: 25px;
+        font-size: 0.5rem;
+    }
+
+    .sidebar {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .box {
+      display: flex;
+    }
+  
+    .left,
+    .right {
+      width: 100%;
+    }
+    .left{
+        overflow-x: auto;
+    }
+}
 html, body{
     margin: 0;
     padding: 0;
@@ -133,7 +305,6 @@ footer{
     border-top: #F8B486 5px solid;
     background-color: #1C1C54;
     width: 100%;
-    height: 15%;
     display: flex;
     justify-content: space-between;
     padding-top: 5%;
@@ -169,3 +340,106 @@ button{
     display: flex;
     font-size: 3rem;
 }
+.boxlogo{
+    width: 100%;
+}
+
+/*kontakt*/
+iframe{
+    margin-top: 2.5%;
+    width: 100%;
+    height: 35vh;
+    border-radius: 16px;
+}
+
+    .contactTypes{
+        padding-top: 40px;
+        display: flex;
+    }
+    .contactTypes ul{
+        list-style: none;
+        display: block;
+    }
+    .contactTypes ul li{
+        font-size: 1.6em;
+        display: flex;
+        padding-bottom: 20px;
+    }
+    .contactTypes ul li img{
+        height: 30px;
+        width: auto;
+        margin-right: 15px;
+    }
+
+    .formularz{
+        margin: auto;
+    }
+    .contactForm input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    .contactForm input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    .contactForm input[type=submit] {
+        color: white;
+        background-color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .contactForm {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin: auto;
+    }
+
+    .form{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-group, .form-group-2{
+        width: 49%;
+    }
+
+    .con{
+        width: 25%;
+    }
+
+
+
+    #main{
+        height: auto;
+    }
+
+    footer{
+        display: flex;
+        margin-top: auto;
+    }
+    
+
+    .godzinka{
+        color: antiquewhite;
+    }
+    
+    .move a{
+        color: wheat;
+    }       
