@@ -1,129 +1,11 @@
-/* html, body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-}
-nav{
-    position: sticky;
-    justify-content: center;
-    text-align: center;
-    background-color: #1C1C54;
-    width: 100%;
-    height: calc(15% - 5px);
-    border-bottom: #FCE28A 5px solid;
-}
-#posts{
-    overflow: hidden;
-    width: auto;
-    padding-left: 2%;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-#posts article{
-     margin: 2%;
-    width: 18%;
-}
-.srodek{
-    overflow-y: auto;
-}
-#main{
-    padding: 5%;
-}
-article img{
-
-    height: 500px;
-}
-.sidebar{
-    width: 10vw;
-    height: 100%;
-    float: right;
-    background-color: #1C1C54;
-    border-left: #FCE28A 5px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-ul{
-    padding-top: 1%;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 10px;
-    background: -webkit-linear-gradient(#F38281, #FCE28A);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-}
-a{
-    margin: 1px;
-    padding: 30px;
-    font-size: 30px;
-    text-decoration: none;
-}
-footer{
-    border-top: #FCE28A 5px solid;
-    background-color: #1C1C54;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 5%;
-}
-#LogoPicture{
-    display: flex;
-    height: 100%;
-    float: left;
-}
-.logo{
-    display: block;
-}
-button{
-    margin-left: 40%;
-    height: 50px;
-    width: 50px;
-}
-.white{
-    background-color: white;
-}
-.black{
-    background-color: black;
-}
-.yellow{
-    background-color: yellow;
-}
-.cyan{
-    background-color: cyan;
-}
-.godzinka{
-    display: flex;
-    font-size: 3rem;
-}
-.pics{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5%;
-}
-article{
-    
-        display: flex;
-        
-        gap: 10px;
-        gap: 10px 20px; 
-        row-gap: 10px;
-        column-gap: 20px;
-      }
-*/
-
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 html, body{
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 nav{
     position: sticky;
@@ -135,6 +17,7 @@ nav{
     border-bottom: #FCE28A 5px solid;
 }
 #posts{
+    font-family: righteous;
     overflow: hidden;
     width: auto;
     padding-left: 2%;
@@ -144,11 +27,13 @@ nav{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 #posts article{
+    border: solid grey 2px;
+    border-radius: 5px;
+    text-align: center;
      margin: 2%;
     width: 20%;
-    text-align: center;
+
 }
 .srodek{
     overflow-y: auto;
@@ -157,13 +42,12 @@ nav{
     padding: 5%;
 }
 article img{
-    width:300px;
+    width:330px;
     height: 400px;
 }
 .sidebar{
     width: 10vw;
-    min-height: 100%;
-    max-height: 2000px;
+    height: 170vh;
     float: right;
     background-color: #1C1C54;
     border-left: #FCE28A 5px solid;
@@ -224,4 +108,18 @@ button{
 .godzinka{
     display: flex;
     font-size: 3rem;
+}
+.move{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+.pr{
+    width: 500px;
+    height: 150px;
+    font-size: 32px;
+    text-align: center;
+    margin-left: 2%;
 }
