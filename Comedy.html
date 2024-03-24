@@ -7,7 +7,7 @@
     <title>Anita maxx wynn films commedy </title>
 </head>
     <body>
-        <nav>
+        <nav id="do">
             <img src="Logo.png"class="LogoPicture">
             <ul>
                 <a href="index.html">Home</a>
@@ -34,11 +34,8 @@
             </div>
             <footer>
                 <div class="move">
-                    <a href="#top">Gora</a>
-                    <a href="#span1">Span 1</a>
-                    <a href="#span2">Span 2</a>
-                    <a href="#span3">Span 3</a>
-                    <a href="#span4">Span 4</a>
+                    <input class="pr" type="button" onClick="document.getElementById('do').scrollIntoView();" value="Nawigacja"/>
+                    <input class="pr" type="button" onClick="document.getElementById('posts').scrollIntoView();" value="Filmy"/>
                 </div>
                 <div class="godzinka">
                     <div id="hours">00</div>
@@ -161,29 +158,6 @@
     function cyan(){
         document.getElementById("posts").style.backgroundColor = "cyan";
         document.getElementById("posts").style.color = "black";
-    }
-    var koszt = document.getElementById("koszt").value;
-    parseInt(koszt)
-    function pln(){
-        
-        document.getElementById("koszt").textContent = koszt;
-        parseInt(koszt)
-        console.log(koszt)
-        document.getElementById("waluta").textContent = " Pln";
-    }
-    function usd(){
-        parseInt(koszt)
-        let usd = koszt*3.92;
-        document.getElementById("koszt").textContent = usd;
-        console.log(koszt)
-        document.getElementById("waluta").textContent = " Usd";
-    }
-    function eur(){
-        parseInt(koszt)
-        let eur = koszt*4.29;
-        document.getElementById("koszt").textContent = eur;
-        console.log(koszt)
-        document.getElementById("waluta").textContent = " Eur";
     }
 </script>
 </html>
