@@ -442,4 +442,8 @@ iframe{
     
     .move a{
         color: wheat;
-    }       
+    } 
+    .contactul li{
+        color: black;
+        -webkit-text-fill-color: initial;
+    }
